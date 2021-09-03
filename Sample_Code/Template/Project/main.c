@@ -225,7 +225,7 @@ void GPIO_Init(void)
 	P30_PUSHPULL_MODE;	
 }
 
-void enable_interrupt(void)
+void set_interrupt_priority(void)
 {
 	set_IP_PT0;
 	set_IPH_PT0H;
@@ -511,7 +511,7 @@ void main (void)
 	TIMER1_Init();
 	TIMER2_Init();
 
-	enable_interrupt();
+	set_interrupt_priority();
 		
     while(1)
     {
